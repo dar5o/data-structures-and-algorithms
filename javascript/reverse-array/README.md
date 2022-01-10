@@ -22,6 +22,6 @@ function ReverseArray takes in 'arr':
     end = end -1
 
 ```
-## Whiteboard img
+## Whiteboard image
 
 ![Whiteboard](./img.png)
