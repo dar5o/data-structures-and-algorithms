@@ -102,7 +102,6 @@ class LinkedList {
     return pointerOne.data;
   }
 }
-  
 }
 
 module.exports = LinkedList;
