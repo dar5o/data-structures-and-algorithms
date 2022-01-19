@@ -48,3 +48,7 @@ Follow your JavaScript standard naming conventions.
 | insert | O(1) | O(n) |
 | includes | O(n) | O(n) |
 | toString | O(n) | O(n) |
+| append() | 
+| insertBefore() |
+| insertAfter() |
+| kthFromnEnd() |
