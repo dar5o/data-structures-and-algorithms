@@ -26,6 +26,9 @@ The linked list class should contain the following methods:
 2. Extend a linked list to allow various insertion methods (append(), insertBefore(), insertAfter() )
 Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
 
+3. Implement a method kthFromEnd() that takes a number, k as a parameter. Return the node's data that is k places from the tail of the linked list.
+
+
 Follow your JavaScript standard naming conventions.
 
 ### Structure and Testing
