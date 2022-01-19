@@ -85,6 +85,24 @@ class LinkedList {
     }
   }
   
+  kthFromEnd(k) {
+    let pointerOne = this.head;
+    let pointerTwo = this.head;
+
+    for(let i = 0; i < k - 1; i += 1) {
+      if(pointerTwo.next === null) {
+        return 'No Data Found';
+      }
+      pointerTwo = pointerTwo.next;
+    }
+    while(pointerTwo.next !== null) {
+      pointerOne = pointerOne.next;
+      pointerTwo = pointerTwo.next;
+    }
+    return pointerOne.data;
+  }
+}
+  
 }
 
 module.exports = LinkedList;
