@@ -102,6 +102,31 @@ class LinkedList {
     return pointerOne.data;
   }
 }
+function zipLists(list1, list2) {
+  const newList = new LinkedList;
+
+  list1 = list1.head;
+  list2 = list2.head;
+  newList.head = new Node(list1.data);
+  list1 = list1.next;
+
+  while(list1 || list2) {
+    if(list1 && list2) {
+      newList.append(list2.data);
+      newList.append(list1.data);
+      list1 = list1.next;
+      list2 = list2.next;
+    } else if( list1 === null && list2) {
+      newList.append(list2.data);
+      list2 = list2.next;
+    } else if( list1 && list2 === null) {
+      newList.append(list1.data);
+      list1 = list1.next;
+    } else {
+      return;
+    }
+    return newList.toString();
+  }
 }
 
 module.exports = LinkedList;
