@@ -78,7 +78,26 @@ class Queue {
     } else {
       return false;
     }
+  }  
+}
+
+class PseudoQueue {
+  constructor(){
+    this.front = new Stack;
+    this.back = new Stack;
+  }
+
+  enqueue(value) {
+    this.back.push(value);
+  }
+
+  dequeue() {
+    if(this.front !== null && this.back !== null) {
+      this.front.push(this.back.pop);
+    }
+    return this.front.pop();
   }
 }
 
-module.exports = {Stack, Queue};
+
+module.exports = {Stack, Queue, PseudoQueue};
