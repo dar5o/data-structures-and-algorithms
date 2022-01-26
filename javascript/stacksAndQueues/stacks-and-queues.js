@@ -131,4 +131,29 @@ class AnimalShelter {
   }
 }
 
+let brackets = (string) => {
+  let stack = [];
+  let checkBrackets = {
+    '(' : ')',
+    '[' : ']',
+    '{' : '}'
+  };
+  for(let i = 0; i < string.length; i++) {
+    if(string[i] === '(' || string[i] === '[' || string[i] === '{') {
+      stack.push(string[i]);
+    } else {
+      let closingBracket = stack.pop();
+      if(string[i] !== checkBrackets[closingBracket]) {
+        return false;
+      }
+    }
+  }
+  if(stack.length !== 0) {
+    return false;
+  }
+  return true;
+};
+
+console.log(brackets('[{()}]'));
+
 module.exports = {Stack, Queue, PseudoQueue, AnimalShelter};
