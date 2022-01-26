@@ -11,3 +11,7 @@ Implement a Queue using two Stacks.
 ## Challenge 12:
 
 Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+
+## Challenge 13:
+
+Write a function called validate brackets
