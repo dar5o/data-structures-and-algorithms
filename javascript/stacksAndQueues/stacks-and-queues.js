@@ -99,5 +99,36 @@ class PseudoQueue {
   }
 }
 
+class AnimalShelter {
+  constructor() {
+    this.front = new Stack();
+    this.back = new Stack();
+  }
 
-module.exports = {Stack, Queue, PseudoQueue};
+  enqueue(animal){
+    if (animal !== 'dog' && animal !== 'cat'){
+      return null;
+    }
+    while (this.front.top) {
+      let newNode = this.front.pop();
+      this.back.push(newNode);
+    }
+    this.front.push(animal);
+    while(this.back.top){
+      let newNode = this.back.pop();
+      this.front.push(newNode);
+    }
+  }
+
+  dequeue(pref){
+    if (pref !== 'dog' && pref !== 'cat'){
+      return null;
+    } else if (pref === 'cat' && this.front.pref === 'cat'){
+      this.front.pop();
+    } else if (pref === 'dog' && this.front.pref === 'dog'){
+      this.front.pop();
+    }
+  }
+}
+
+module.exports = {Stack, Queue, PseudoQueue, AnimalShelter};
