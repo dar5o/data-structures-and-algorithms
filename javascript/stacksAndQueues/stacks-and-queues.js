@@ -110,13 +110,13 @@ class AnimalShelter {
       return null;
     }
     while (this.front.top) {
-      let newNode = this.front.pop();
-      this.back.push(newNode);
+      let node1 = this.front.pop();
+      this.back.push(node1);
     }
     this.front.push(animal);
     while(this.back.top){
-      let newNode = this.back.pop();
-      this.front.push(newNode);
+      let node2 = this.back.pop();
+      this.front.push(node2);
     }
   }
 
