@@ -127,6 +127,27 @@ class BinaryTree {
     return array;
   }
 
+findMax() {
+    let currentNode = this.root;
+
+    let findMaxValue = (currentNode) => {
+      if (currentNode === null) {
+        return;
+      }
+      let max = currentNode.value;
+      let maxLeft = findMaxValue(currentNode.left);
+      let maxRight = findMaxValue(currentNode.right);
+
+      if (maxLeft > max) {
+        max = maxLeft;
+      }
+      if (maxRight > max) {
+        max = maxRight;
+      }
+      return max;
+    };
+    return findMaxValue(currentNode);
+  }
 
 }
 
