@@ -151,5 +151,30 @@ findMax() {
 
 }
 
+let breadthFirst = (tree) => {
+  let queue = [];
+  let arr = [];
+  if (!tree.root) {
+    return 'Something went wrong!';
+  } else {
+    queue.unshift(tree.root);
+    arr.push(tree.root);
+  }
+  let currentNode = queue.pop();
+  while(currentNode) {
+    if (currentNode.left) {
+      queue.unshift(currentNode.left);
+    }
+    if (currentNode.right) {
+      queue.unshift(currentNode.right);
+    }
+    currentNode = queue.pop();
+    // console.log(currentNode, 'THIS IS CURRENT NODE');
+    arr.push(currentNode);
+  }
+  return arr;
+}
+
+
 
 module.exports = { Node, BinarySearchTree, BinaryTree, KAryTree }
