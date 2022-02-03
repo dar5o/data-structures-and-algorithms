@@ -175,6 +175,40 @@ let breadthFirst = (tree) => {
   return arr;
 }
 
+let fizzBuzzTree = (kArytree) => {
 
+  let currentNode = kArytree.root;
+  let array = [];
+
+  while(currentNode && currentNode.children){
+    for(let i = 0; i < currentNode.children.length; i++){
+
+  // replace the value with “Fizz” if the value is divisible by 3
+  if(currentNode.value % 3 === 0){
+    currentNode.value = 'Fizz';
+    // replace the value with “Buzz” if the value is divisible by 5
+  } else if( currentNode.value % 5 === 0){
+    currentNode.value = 'Buzz';
+    // replace the value with “FizzBuzz” if the value is divisible by 3 and 5
+  } else if (currentNode.value % 15 === 0){
+    currentNode.value = 'FizzBuzz';
+  // simply turn the number into a String f the value is not divisible by 3 or 5
+  } else {
+    return currentNode.value.toString();
+  }
+};
+
+let tree = new BinaryTree();
+let kt = new KAryTree();
+
+tree.root = new Node(1);
+tree.root.left = new Node(2);
+tree.root.left.left = new Node(3);
+tree.root.left.left.left = new Node(4);
+tree.root.left.left.right = new Node(18);
+tree.root.right = new Node(10);
+tree.root.right.right = new Node(32);
+tree.root.right.right.left = new Node(40);
+tree.root.right.right.left.right = new Node(11);
 
 module.exports = { Node, BinarySearchTree, BinaryTree, KAryTree }
