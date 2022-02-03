@@ -209,6 +209,5 @@ tree.root.left.left.right = new Node(18);
 tree.root.right = new Node(10);
 tree.root.right.right = new Node(32);
 tree.root.right.right.left = new Node(40);
-tree.root.right.right.left.right = new Node(11);
 
 module.exports = { Node, BinarySearchTree, BinaryTree, KAryTree }
