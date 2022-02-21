@@ -9,7 +9,7 @@ describe('queue tests: ', () => {
     expect(hashT instanceof HashTable).toBe(true);
   });
 
-  it('Can find values within the HashTable', () => {
+  it('can find values within the HashTable', () => {
     hashT.set('!GN5baB', 'password');
 
     expect(hashT.get('!GN5baB')).toBe('value');
