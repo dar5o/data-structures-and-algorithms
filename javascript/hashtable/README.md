@@ -1,5 +1,4 @@
 # Hash Table
-
 ## I implemented a HashTable class with the following methods:
   - set
   - get
@@ -38,3 +37,18 @@ I planned on figuring out how each part of the Hash Table was connected and to c
 ### Properties:
   - this.keyMap
     + an array of values
+
+
+# Hash Repeating Word
+
+## Challenge
+Write a function called repeated word that finds the first word to occur more than once in a string
+
+## Methods and Properties
+Arguments: string
+Return: string
+
+## Approach & Efficiency
+Create a new string from the argument string that is lowercase and rid of special characters, and then split it on spaces. Then created a hash with the length of the array. Then used a for loop to see if the hash contain the word at i, if it does return it, if not set it in the hash.
+
+As for efficiency, it's O(n) for space and time.
