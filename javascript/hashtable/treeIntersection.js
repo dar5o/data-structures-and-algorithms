@@ -1,6 +1,6 @@
 'use strict';
 
-let HashTable = require('../hashtable.js');
+let HashTable = require('./hashtable.js');
 let tree1 = require('./tree1.js');
 let tree2 = require('./tree2.js');
 
